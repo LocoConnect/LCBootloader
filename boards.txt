@@ -1,0 +1,71 @@
+##############################################################
+
+menu.model=Model
+menu.clock=Clock
+menu.clock_bod=Clock/BOD
+menu.SDCS=SDcard CS Pin
+menu.BOD=BOD
+menu.pinout=Pinout
+menu.cpu=Processor
+
+##############################################################
+
+avr_boot_atmega328lc.name=LocoConnect
+
+avr_boot_atmega328lc.upload.tool=arduino:avrdude
+avr_boot_atmega328lc.upload.maximum_data_size=2048
+avr_boot_atmega328lc.upload.maximum_size=28672
+
+avr_boot_atmega328lc.bootloader.tool=arduino:avrdude
+avr_boot_atmega328lc.bootloader.high_fuses=0xD0
+avr_boot_atmega328lc.bootloader.unlock_bits=0x3F
+avr_boot_atmega328lc.bootloader.lock_bits=0x0F
+
+avr_boot_atmega328lc.build.core=arduino:arduino
+avr_boot_atmega328lc.build.board=AVR_ATMEGA328P
+
+# Processor Menu
+avr_boot_atmega328lc.menu.cpu.atmega328p=ATmega328P
+avr_boot_atmega328lc.menu.cpu.atmega328p.build.mcu=atmega328p
+
+# Model Menu
+avr_boot_atmega328lc.menu.model.loco=LocoConnect
+avr_boot_atmega328lc.menu.model.loco.build.variant=arduino:standard
+avr_boot_atmega328lc.menu.model.loco.build.board=AVR_UNO
+
+# Clock Menu
+avr_boot_atmega328lc.menu.clock.16mhz_full_swing=16MHz External Full Swing
+avr_boot_atmega328lc.menu.clock.16mhz_full_swing.bootloader.low_fuses=0xF7
+avr_boot_atmega328lc.menu.clock.16mhz_full_swing.build.f_cpu=16000000L
+
+avr_boot_atmega328lc.menu.clock.16mhz_low_power=16MHz External Low Power
+avr_boot_atmega328lc.menu.clock.16mhz_low_power.bootloader.low_fuses=0xFF
+avr_boot_atmega328lc.menu.clock.16mhz_low_power.build.f_cpu=16000000L
+
+#SD CS Pin Menu
+avr_boot_atmega328lc.menu.SDCS.16=A2
+avr_boot_atmega328lc.menu.SDCS.16.cs_pin=16
+
+avr_boot_atmega328lc.menu.SDCS.4=4
+avr_boot_atmega328lc.menu.SDCS.4.cs_pin=4
+
+avr_boot_atmega328lc.menu.SDCS.8=8
+avr_boot_atmega328lc.menu.SDCS.8.cs_pin=8
+
+avr_boot_atmega328lc.menu.SDCS.10=10
+avr_boot_atmega328lc.menu.SDCS.10.cs_pin=10
+
+# BOD Menu
+avr_boot_atmega328lc.menu.BOD.2_7=2.7V
+avr_boot_atmega328lc.menu.BOD.2_7.bootloader.extended_fuses=0x05
+
+avr_boot_atmega328lc.menu.BOD.4_3=4.3V
+avr_boot_atmega328lc.menu.BOD.4_3.bootloader.extended_fuses=0xFC
+
+avr_boot_atmega328lc.menu.BOD.1_8=1.8V
+avr_boot_atmega328lc.menu.BOD.1_8.bootloader.extended_fuses=0xFE
+
+avr_boot_atmega328lc.menu.BOD.off=Off
+avr_boot_atmega328lc.menu.BOD.off.bootloader.extended_fuses=0xFF
+
+avr_boot_atmega328lc.bootloader.file={build.mcu}_cs{cs_pin}_{build.f_cpu}.hex
