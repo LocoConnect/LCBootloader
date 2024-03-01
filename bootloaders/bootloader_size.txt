@@ -1,5 +1,9 @@
    text	   data	    bss	    dec	    hex	filename
-      0	   3746	      0	   3746	    ea2	atmega328p_cs10_16000000L.hex
-      0	   3746	      0	   3746	    ea2	atmega328p_cs16_16000000L.hex
-      0	   3746	      0	   3746	    ea2	atmega328p_cs4_16000000L.hex
-      0	   3746	      0	   3746	    ea2	atmega328p_cs8_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pL_cs10_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pL_cs16_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pL_cs4_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pL_cs8_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pV_cs10_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pV_cs16_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pV_cs4_16000000L.hex
+      0	   3874	      0	   3874	    f22	atmega328pV_cs8_16000000L.hex
