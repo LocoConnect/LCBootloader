@@ -7,6 +7,7 @@ menu.SDCS=SDcard CS Pin
 menu.BOD=BOD
 menu.pinout=Pinout
 menu.cpu=Processor
+menu.vlx=VL53L-Version
 
 ##############################################################
 
@@ -34,13 +35,20 @@ avr_boot_atmega328lc.menu.model.loco.build.variant=arduino:standard
 avr_boot_atmega328lc.menu.model.loco.build.board=AVR_UNO
 
 # Clock Menu
+avr_boot_atmega328lc.menu.clock.16mhz_low_power=16MHz External Low Power
+avr_boot_atmega328lc.menu.clock.16mhz_low_power.bootloader.low_fuses=0xFF
+avr_boot_atmega328lc.menu.clock.16mhz_low_power.build.f_cpu=16000000L
+
 avr_boot_atmega328lc.menu.clock.16mhz_full_swing=16MHz External Full Swing
 avr_boot_atmega328lc.menu.clock.16mhz_full_swing.bootloader.low_fuses=0xF7
 avr_boot_atmega328lc.menu.clock.16mhz_full_swing.build.f_cpu=16000000L
 
-avr_boot_atmega328lc.menu.clock.16mhz_low_power=16MHz External Low Power
-avr_boot_atmega328lc.menu.clock.16mhz_low_power.bootloader.low_fuses=0xFF
-avr_boot_atmega328lc.menu.clock.16mhz_low_power.build.f_cpu=16000000L
+# VLX Menu
+avr_boot_atmega328lc.menu.vlx.disabled=Disabled
+avr_boot_atmega328lc.menu.vlx.disabled.type_char=L
+
+avr_boot_atmega328lc.menu.vlx.enabled=Enabled
+avr_boot_atmega328lc.menu.vlx.enabled.type_char=V
 
 #SD CS Pin Menu
 avr_boot_atmega328lc.menu.SDCS.16=A2
@@ -68,4 +76,4 @@ avr_boot_atmega328lc.menu.BOD.1_8.bootloader.extended_fuses=0xFE
 avr_boot_atmega328lc.menu.BOD.off=Off
 avr_boot_atmega328lc.menu.BOD.off.bootloader.extended_fuses=0xFF
 
-avr_boot_atmega328lc.bootloader.file={build.mcu}_cs{cs_pin}_{build.f_cpu}.hex
+avr_boot_atmega328lc.bootloader.file={build.mcu}{type_char}_cs{cs_pin}_{build.f_cpu}.hex
